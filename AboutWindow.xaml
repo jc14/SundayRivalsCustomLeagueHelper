@@ -1,9 +1,9 @@
-﻿<Window x:Class="SundayRivalsCustomRosterHelper.AboutWindow"
+﻿<Window x:Class="SundayRivalsCustomLeagueHelper.AboutWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SundayRivalsCustomRosterHelper"
+        xmlns:local="clr-namespace:SundayRivalsCustomLeagueHelper"
         mc:Ignorable="d"
         Title="About" Height="278" Width="311">
     <StackPanel>
@@ -11,6 +11,6 @@
         <TextBlock TextWrapping="Wrap" Margin="10,10,10,10">Super epic tool for handling custom leagues in Sunday Rivals! Rather than mess with Windows Explorer, you can simply use this!</TextBlock>
         <TextBlock TextWrapping="Wrap" Margin="10,10,10,10">Tool created by: SolitudeDude (Jordan Campbell)</TextBlock>
         <TextBlock TextWrapping="Wrap" Margin="10,10,10,10">Sunday Rivals created by: 26k</TextBlock>
-        <TextBlock TextWrapping="Wrap" Margin="10,10,10,10">Tool hosted on GitHub: <Hyperlink NavigateUri="https://github.com/jc14/SundayRivalsCustomRosterHelper">https://github.com/jc14/SundayRivalsCustomRosterHelper</Hyperlink></TextBlock>
+        <TextBlock TextWrapping="Wrap" Margin="10,10,10,10">Tool hosted on GitHub: <Hyperlink NavigateUri="https://github.com/jc14/SundayRivalsCustomLeagueHelper" RequestNavigate="Hyperlink_RequestNavigate">https://github.com/jc14/SundayRivalsCustomLeagueHelper</Hyperlink></TextBlock>
     </StackPanel>
 </Window>

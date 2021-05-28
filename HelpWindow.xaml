@@ -1,12 +1,20 @@
-﻿<Window x:Class="SundayRivalsCustomRosterHelper.HelpWindow"
+﻿<Window x:Class="SundayRivalsCustomLeagueHelper.HelpWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SundayRivalsCustomRosterHelper"
+        xmlns:local="clr-namespace:SundayRivalsCustomLeagueHelper"
         mc:Ignorable="d"
-        Title="HelpWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Help" Height="317" Width="800">
+    <StackPanel Margin="10,10,10,10">
+        <TextBlock>Let's load a league!</TextBlock>
+        <Label FontSize="14" FontWeight="Normal" FontStyle="Italic">Step 1:</Label>
+        <TextBlock>Click the "Select League Folder" button to open a directory finder window. Locate the league folder, but make sure it's unzipped first.</TextBlock>
+        <Label FontSize="14" FontWeight="Normal" FontStyle="Italic">Step 2:</Label>
+        <TextBlock TextWrapping="Wrap">Click on one of the four League Slot buttons to select which league to override in the game. <Bold>This will override the league folder in that slot!</Bold> <Bold>Again! This will override the league folder in that slot!</Bold></TextBlock>
+        <Label FontSize="14" FontWeight="Normal" FontStyle="Italic">Step 3:</Label>
+        <TextBlock TextWrapping="Wrap">Once you have selected a league to load and a slot to load it into, click execute! This will move your selected league folder, rename it, and place it in the game files for Sunday Rivals to use.</TextBlock>
+        <Label FontSize="14" FontWeight="Normal" FontStyle="Italic">Step 4:</Label>
+        <TextBlock TextWrapping="Wrap">Once execution is complete you can open Sunday Rivals, navigate to your custom league in game, and click "Sync League". You should be ready to go after that!</TextBlock>
+    </StackPanel>
 </Window>
