@@ -68,6 +68,9 @@ namespace SundayRivalsCustomLeagueHelper
 				}
 			}
 
+			if (selectedLeagueDirectory == null)
+				return;
+
 			SelectedLeagueFolderText.Text = selectedLeagueDirectory.FullName;
 
 			CheckToEnableExecuteButton();
@@ -105,15 +108,23 @@ namespace SundayRivalsCustomLeagueHelper
 		{
 			StatusText.Text = "Executing...";
 
+			string leagueSlotPath = GetSelectedLeagueSlotFolderPath(selectedLeagueSlot);
+
 			// Delete league folder in selected slot.
-			DirectoryInfo leagueDirectory = new DirectoryInfo(GetSelectedLeagueSlotFolderPath());
+			DirectoryInfo leagueDirectory = new DirectoryInfo(leagueSlotPath);
 			if (leagueDirectory.Exists)
 				leagueDirectory.Delete(true);
 
-			// Copy selected league folder into selected league slot.
-			selectedLeagueDirectory.MoveTo(GetSelectedLeagueSlotFolderPath());
+			DirectoryInfo targetLeagueDirectory = new DirectoryInfo(GetSelectedLeagueSlotFolderPath(selectedLeagueSlot));
 
-			StatusText.Text = $"Finished! League was moved into league slot {selectedLeagueSlot} in Sunday Rivals.";
+			// Copy selected league folder into selected league slot.
+			CopyAll(selectedLeagueDirectory, targetLeagueDirectory);
+
+			// Rename .lge file to the correct slot.
+			FileInfo leagueFile = targetLeagueDirectory.GetFiles("*.lge")[0];
+			leagueFile.MoveTo(GetInGameLeagueFileFullName(selectedLeagueSlot));
+
+			StatusText.Text = $"Finished! League was copied into league slot {selectedLeagueSlot} in Sunday Rivals.";
 		}
 
 		private void SelectLeagueSlot(int slot)
@@ -127,12 +138,17 @@ namespace SundayRivalsCustomLeagueHelper
 			ExecuteButton.IsEnabled = selectedLeagueSlot != 0 && selectedLeagueDirectory != null;
 		}
 
-		private string GetSelectedLeagueSlotFolderPath()
+		private string GetSelectedLeagueSlotFolderPath(int leagueSlot)
 		{
-			return $"{sundayRivalsLeaguesPath}\\league_{selectedLeagueSlot}";
+			return $"{sundayRivalsLeaguesPath}\\league_{leagueSlot}";
 		}
 
-		public void CopyAll(DirectoryInfo source, DirectoryInfo target)
+		private string GetInGameLeagueFileFullName(int leagueSlot)
+		{
+			return $"{GetSelectedLeagueSlotFolderPath(leagueSlot)}\\league_{leagueSlot}.lge";
+		}
+
+		private void CopyAll(DirectoryInfo source, DirectoryInfo target)
 		{
 			if (source.FullName.ToLower() == target.FullName.ToLower())
 			{

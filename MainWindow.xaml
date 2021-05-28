@@ -39,8 +39,8 @@
             </Grid.RowDefinitions>
 
             <Button Grid.Column="0" Grid.Row="0" Margin="0,5,5,5" Click="Select_League_Slot_1_Button_Click">League Slot 1</Button>
-            <Button Grid.Column="0" Grid.Row="1" Margin="5,5,0,5" Click="Select_League_Slot_2_Button_Click">League Slot 2</Button>
-            <Button Grid.Column="1" Grid.Row="0" Margin="0,5,5,5" Click="Select_League_Slot_3_Button_Click">League Slot 3</Button>
+            <Button Grid.Column="0" Grid.Row="1" Margin="0,5,5,5" Click="Select_League_Slot_2_Button_Click">League Slot 2</Button>
+            <Button Grid.Column="1" Grid.Row="0" Margin="5,5,0,5" Click="Select_League_Slot_3_Button_Click">League Slot 3</Button>
             <Button Grid.Column="1" Grid.Row="1" Margin="5,5,0,5" Click="Select_League_Slot_4_Button_Click">League Slot 4</Button>
         </Grid>
         <Grid Grid.Row="3" Margin="10,0,10,0">
