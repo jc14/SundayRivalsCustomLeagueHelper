@@ -10,31 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace SundayRivalsCustomRosterHelper
 {
 	/// <summary>
-	/// Interaction logic for MainWindow.xaml
+	/// Interaction logic for HelpWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window
+	public partial class HelpWindow : Window
 	{
-		public MainWindow()
+		public HelpWindow()
 		{
 			InitializeComponent();
-		}
-
-		private void MenuItem_About_Click(object sender, RoutedEventArgs e)
-		{
-			AboutWindow window = new AboutWindow();
-			window.Show();
-		}
-
-		private void MenuItem_Help_Click(object sender, RoutedEventArgs e)
-		{
-			HelpWindow window = new HelpWindow();
-			window.Show();
 		}
 	}
 }
