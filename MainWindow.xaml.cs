@@ -13,7 +13,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace SundayRivalsCustomLeagueHelper
 {
@@ -112,9 +111,9 @@ namespace SundayRivalsCustomLeagueHelper
 				leagueDirectory.Delete(true);
 
 			// Copy selected league folder into selected league slot.
-			CopyFilesRecursively(selectedLeagueDirectory.FullName, GetSelectedLeagueSlotFolderPath());
+			selectedLeagueDirectory.MoveTo(GetSelectedLeagueSlotFolderPath());
 
-			StatusText.Text = $"Finished! League was loaded into league slot {selectedLeagueSlot} in Sunday Rivals.";
+			StatusText.Text = $"Finished! League was moved into league slot {selectedLeagueSlot} in Sunday Rivals.";
 		}
 
 		private void SelectLeagueSlot(int slot)
@@ -133,18 +132,32 @@ namespace SundayRivalsCustomLeagueHelper
 			return $"{sundayRivalsLeaguesPath}\\league_{selectedLeagueSlot}";
 		}
 
-		private void CopyFilesRecursively(string sourcePath, string targetPath)
+		public void CopyAll(DirectoryInfo source, DirectoryInfo target)
 		{
-			//Now Create all of the directories
-			foreach (string dirPath in Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories))
+			if (source.FullName.ToLower() == target.FullName.ToLower())
 			{
-				Directory.CreateDirectory(dirPath.Replace(sourcePath, targetPath));
+				return;
 			}
 
-			//Copy all the files & Replaces any files with the same name
-			foreach (string newPath in Directory.GetFiles(sourcePath, "*.*", SearchOption.AllDirectories))
+			// Check if the target directory exists, if not, create it.
+			if (Directory.Exists(target.FullName) == false)
 			{
-				File.Copy(newPath, newPath.Replace(sourcePath, targetPath), true);
+				Directory.CreateDirectory(target.FullName);
+			}
+
+			// Copy each file into it's new directory.
+			foreach (FileInfo fi in source.GetFiles())
+			{
+				Console.WriteLine(@"Copying {0}\{1}", target.FullName, fi.Name);
+				fi.CopyTo(Path.Combine(target.ToString(), fi.Name), true);
+			}
+
+			// Copy each subdirectory using recursion.
+			foreach (DirectoryInfo diSourceSubDir in source.GetDirectories())
+			{
+				DirectoryInfo nextTargetSubDir =
+					target.CreateSubdirectory(diSourceSubDir.Name);
+				CopyAll(diSourceSubDir, nextTargetSubDir);
 			}
 		}
 	}
