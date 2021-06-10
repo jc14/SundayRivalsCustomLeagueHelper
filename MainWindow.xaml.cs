@@ -74,12 +74,12 @@ namespace SundayRivalsCustomLeagueHelper
 				SelectedLeagueFolderText.Text = "Selected directory is not a valid league folder...";
 				selectedLeagueDirectory = null;
 			}
+			CheckToEnableExecuteButton();
 
 			if (selectedLeagueDirectory == null)
 				return;
 
 			SelectedLeagueFolderText.Text = selectedLeagueDirectory.FullName;
-			CheckToEnableExecuteButton();
 		}
 
 		private void Select_League_Slot_1_Button_Click(object sender, RoutedEventArgs e)
