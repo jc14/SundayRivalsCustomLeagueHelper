@@ -68,11 +68,17 @@ namespace SundayRivalsCustomLeagueHelper
 				}
 			}
 
+			// Check if the selected directory is a valid Sunday Rivals League directory.
+			if (IsDirectoryValidLeague(selectedLeagueDirectory) == false)
+			{
+				SelectedLeagueFolderText.Text = "Selected directory is not a valid league folder...";
+				selectedLeagueDirectory = null;
+			}
+
 			if (selectedLeagueDirectory == null)
 				return;
 
 			SelectedLeagueFolderText.Text = selectedLeagueDirectory.FullName;
-
 			CheckToEnableExecuteButton();
 		}
 
@@ -125,6 +131,19 @@ namespace SundayRivalsCustomLeagueHelper
 			leagueFile.MoveTo(GetInGameLeagueFileFullName(selectedLeagueSlot));
 
 			StatusText.Text = $"Finished! League was copied into league slot {selectedLeagueSlot} in Sunday Rivals.";
+		}
+
+		/// <summary>
+		/// Determines if provided directory is a valid Sunday Rivals League Folder.
+		/// </summary>
+		/// <param name="directory"></param>
+		/// <returns></returns>
+		private bool IsDirectoryValidLeague(DirectoryInfo directory)
+		{
+			if (directory.GetFiles("*.lge").Length == 0 && directory.GetFiles("*.ros").Length != 32)
+				return false;
+
+			return true;
 		}
 
 		private void SelectLeagueSlot(int slot)
