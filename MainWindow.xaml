@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SundayRivalsCustomLeagueHelper"
         mc:Ignorable="d"
-        Title="Sunday Rivals Custom League Helper" Height="450" Width="500" MaxHeight="450" MaxWidth="497" MinWidth="500" MinHeight="450">
+        Title="Sunday Rivals Custom League Helper v0.2" Height="450" Width="500" MaxHeight="450" MaxWidth="497" MinWidth="500" MinHeight="450">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>

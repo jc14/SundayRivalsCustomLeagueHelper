@@ -131,6 +131,7 @@ namespace SundayRivalsCustomLeagueHelper
 		{
 			selectedLeagueSlot = slot;
 			SelectedLeagueSlotText.Text = $"Selected League Slot {slot}";
+			StatusText.Text = "New league slot selected. Waiting to execute...";
 		}
 
 		private void CheckToEnableExecuteButton()
