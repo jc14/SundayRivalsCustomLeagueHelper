@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SundayRivalsCustomLeagueHelper", "SundayRivalsCustomLeagueHelper.csproj", "{4AD96603-4C38-458B-936A-430E22CE2BDD}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "..\Setup\Setup.vdproj", "{A6A4E362-BCA9-48BA-B8CB-CB961465FD1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{4AD96603-4C38-458B-936A-430E22CE2BDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AD96603-4C38-458B-936A-430E22CE2BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AD96603-4C38-458B-936A-430E22CE2BDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6A4E362-BCA9-48BA-B8CB-CB961465FD1F}.Debug|Any CPU.ActiveCfg = Debug
+		{A6A4E362-BCA9-48BA-B8CB-CB961465FD1F}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
