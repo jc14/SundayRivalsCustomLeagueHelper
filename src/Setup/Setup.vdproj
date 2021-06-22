@@ -33,7 +33,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\Setup.msi"
+        "OutputFilename" = "8:Debug\\SundayRivalsCustomLeagueHelperSetup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -43,13 +43,29 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
         "Release"
         {
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\Setup.msi"
+        "OutputFilename" = "8:Release\\SundayRivalsCustomLeagueHelperSetup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -59,6 +75,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -167,7 +191,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Sunday Rivals Custom League Helper"
         "ProductCode" = "8:{77F31817-6654-47C1-961B-0330E8620C37}"
-        "PackageCode" = "8:{D40B9690-F034-4773-80D9-3A9645B21D9C}"
+        "PackageCode" = "8:{F43F898F-C16A-4E83-AE18-988EC1381378}"
         "UpgradeCode" = "8:{29A0A494-DA47-4FB2-A62A-12B4EF210278}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -702,7 +726,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E47E22EF5E8F4B84BE3BADED09138985"
             {
-            "SourcePath" = "8:..\\SundayRivalsCustomLeagueHelper\\obj\\Release\\net5.0-windows\\apphost.exe"
+            "SourcePath" = "8:..\\SundayRivalsCustomLeagueHelper\\obj\\Debug\\net5.0-windows\\apphost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_FC640EDA23544785A00DA9F14B68995A"
