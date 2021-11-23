@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SundayRivalsCustomLeagueHelper"
         mc:Ignorable="d"
-        Title="Sunday Rivals Custom League Helper v1.0" Height="450" Width="500" MaxHeight="450" MaxWidth="497" MinWidth="500" MinHeight="450">
+        Title="Sunday Rivals Custom League Helper v1.1" Height="450" Width="500" MaxHeight="450" MaxWidth="497" MinWidth="500" MinHeight="450">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
@@ -15,6 +15,7 @@
         </Grid.RowDefinitions>
 
         <Menu Grid.Row="0">
+            <MenuItem Header="Open Leagues Folder" Click="MenuItem_OpenLeaguesFolder_Click"/>
             <MenuItem Header="About" Click="MenuItem_About_Click"/>
             <MenuItem Header="Help" Click="MenuItem_Help_Click"/>
         </Menu>

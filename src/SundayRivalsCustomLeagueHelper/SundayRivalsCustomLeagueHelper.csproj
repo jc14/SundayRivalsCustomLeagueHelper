@@ -6,6 +6,7 @@
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>shortcut.ico</ApplicationIcon>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
 </Project>

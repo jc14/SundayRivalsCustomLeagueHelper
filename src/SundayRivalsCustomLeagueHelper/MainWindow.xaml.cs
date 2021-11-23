@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
+using System.Diagnostics;
 
 namespace SundayRivalsCustomLeagueHelper
 {
@@ -42,6 +43,23 @@ namespace SundayRivalsCustomLeagueHelper
 
 			SelectedLeagueFolderText.Text = "League folder not selected...";
 			CheckToEnableExecuteButton();
+		}
+
+		private void MenuItem_OpenLeaguesFolder_Click(object sender, RoutedEventArgs e)
+		{
+			if (Directory.Exists(sundayRivalsLeaguesPath))
+			{
+				Process.Start(new ProcessStartInfo { Arguments = sundayRivalsLeaguesPath, FileName = "explorer.exe" });
+			}
+			else
+			{
+				System.Windows.MessageBox.Show(
+					"Leagues folder for Sunday Rivals doesn't exist. Please ensure Sunday Rivals is installed and has been launched at least once.",
+					"Missing leagues folder",
+					MessageBoxButton.OK,
+					MessageBoxImage.Error
+				);
+			}
 		}
 
 		private void MenuItem_About_Click(object sender, RoutedEventArgs e)
