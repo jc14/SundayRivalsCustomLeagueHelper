@@ -82,6 +82,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -190,15 +198,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Sunday Rivals Custom League Helper"
-        "ProductCode" = "8:{77F31817-6654-47C1-961B-0330E8620C37}"
-        "PackageCode" = "8:{F43F898F-C16A-4E83-AE18-988EC1381378}"
+        "ProductCode" = "8:{8B061CDA-AA71-4298-9984-C0D9E5F83D5E}"
+        "PackageCode" = "8:{476A7E5F-79F5-4001-A8C2-77CC34A2AE87}"
         "UpgradeCode" = "8:{29A0A494-DA47-4FB2-A62A-12B4EF210278}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.1.0"
         "Manufacturer" = "8:SolitudeDude"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -726,7 +734,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E47E22EF5E8F4B84BE3BADED09138985"
             {
-            "SourcePath" = "8:..\\SundayRivalsCustomLeagueHelper\\obj\\Debug\\net5.0-windows\\apphost.exe"
+            "SourcePath" = "8:..\\SundayRivalsCustomLeagueHelper\\obj\\Release\\net5.0-windows\\apphost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_FC640EDA23544785A00DA9F14B68995A"
